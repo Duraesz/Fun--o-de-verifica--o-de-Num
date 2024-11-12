@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image:url(fundo-preto.jpg);
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    font-family: 'Arial', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 3.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: whitesmoke;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-out;
+}
+h2 {
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffffd1; 
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra suave para contraste */
+    animation: fadeIn 1.2s ease-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+input[type="number"] {
+    width: 20em; /* Aumentando a largura */
+    height: 3.5em; /* Aumentando a altura */
+    padding: 0 1em;
+    font-size: 18px; /* Tamanho da fonte maior */
+    font-family: inherit;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #333;
+    color: white;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+    color: #aaa;
+}
+
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #0fd850;
+    background-color: #444;
+}
+
+.btn {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+ .btn::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #1a00c2 0%, #a300f4 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+ }
+  .btn:hover::before {
+    width: 9em;
+  }
